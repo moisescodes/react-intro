@@ -1,0 +1,23 @@
+{
+  "name": "react-intro",
+  "version": "1.0.0",
+  "description": "Start the project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumtimeswhy/react-intro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumtimeswhy/react-intro/issues"
+  },
+  "homepage": "https://github.com/sumtimeswhy/react-intro#readme",
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  }
+}
