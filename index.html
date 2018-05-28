@@ -7,6 +7,20 @@
 
 <body>
     <p>Test page</p>
+    <div id="content"></div>
+
+    <div id="list"></div>
+
+    <script type="text/javascript">
+        var h1 = React.createElement('h1', null, 'Hello world!');
+        ReactDOM.render(h1, document.getElementById('content'));
+
+        var listItem = React.createElement('li', null, 'Test item');
+        ReactDOM.render(
+            React.createElement('ul', null, listItem, listItem),
+            document.getElementById('list')
+        );
+    </script>
 </body>
 
 </html>
