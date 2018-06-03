@@ -13,11 +13,34 @@
 
     <script type="text/javascript">
         var h1 = React.createElement('h1', null, 'Hello world!');
-        ReactDOM.render(h1, document.getElementById('content'));
+        
+        // ES6 style class definition. Previously would use React.createClass()
+        // createClass deprecated as of React 15.5.4
+        class HelloWorld extends React.Component {
+            // ES6 style attribute. Same as render: function () {...}
+            render () {
+                return React.createElement('div', null, h1);
+            }
+        }
 
-        var listItem = React.createElement('li', null, 'Test item');
         ReactDOM.render(
-            React.createElement('ul', null, listItem, listItem),
+            React.createElement(HelloWorld, null), 
+            document.getElementById('content'));
+
+        var listContent = React.createElement('span', null, 'Test item');
+        
+        class ListItem extends React.Component {
+            render() {
+                //return React.createElement('li', null, listContent);
+                return React.createElement('li', this.props, this.props.itemText);
+            }
+        }
+
+        ReactDOM.render(
+            React.createElement('ul', 
+                null, 
+                React.createElement(ListItem, {id: 'item1', title: 'First item', itemText: 'Buy milk'}), 
+                React.createElement(ListItem, {id: 'item2', title: 'Second item', itemText: 'Do Laundry'})),
             document.getElementById('list')
         );
     </script>
