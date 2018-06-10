@@ -4,7 +4,8 @@
   "description": "Start the project.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":  "./node_modules/.bin/babel js/script.jsx -o js/script.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,9 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-react": "^6.24.1"
+  },
+  "babel": {
+    "presets": ["react"]
   }
+
 }
